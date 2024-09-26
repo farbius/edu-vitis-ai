@@ -31,6 +31,7 @@ proc number_of_processor {} {
 
 set project_name top
 set project_dir .
+set export_dir ../
 set n_cores [number_of_processor]
 set n_cores [expr $n_cores - 2]
 
@@ -60,6 +61,6 @@ wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs $n_cores
 wait_on_run impl_1 
 
-write_hw_platform -fixed -include_bit -force -file ${project_dir}/sys_wrapper.xsa
+write_hw_platform -fixed -include_bit -force -file ${export_dir}/sys_wrapper.xsa
 
 puts "<< Vivado project is ready"
