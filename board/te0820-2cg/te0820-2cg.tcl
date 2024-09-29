@@ -36,7 +36,7 @@ set n_cores [number_of_processor]
 set n_cores [expr $n_cores - 2]
 
 # getting a FPGA part used in the project
-set part xczu4ev-sfvc784-1-e
+set part xczu2cg-sfvc784-1-i
 # creating a project
 create_project ${project_name} ${project_dir} -part ${part}
 # setting ip repository path

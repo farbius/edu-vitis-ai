@@ -1,6 +1,6 @@
 
 PWD := $(shell pwd)
-TARGETS := te0820-4ev linux
+TARGETS := te0820-4ev te0820-2cg linux
 
 .PHONY: all clean $(TARGETS)
 
