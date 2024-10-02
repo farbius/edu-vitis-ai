@@ -1,20 +1,11 @@
 SUMMARY = "Vitis AI RunTime"
 DESCRIPTION = "Runner is an application level runtime interface for DPU IPs based on XRT. It use XIR subgraph as input, and run it on different targets. There are also emulators implemented with same interface to make debuging eaiser."
 
-
 require recipes-vitis-ai/vitis-ai-library/vitisai.inc
-
 
 S = "${WORKDIR}/git/src/vai_runtime/vart"
 
-
-
 DEPENDS = "json-c xir target-factory"
-
-
-
-# By default, Vart enables vitis-flow which depends on xrt. Please remove this line if use vivado-flow
-PACKAGECONFIG:append = " vitis"
 
 PACKAGECONFIG[test] = "-DBUILD_TEST=ON,-DBUILD_TEST=OFF,opencv,"
 PACKAGECONFIG[python] = "-DBUILD_PYTHON=ON -DPYTHON_INSTALL_DIR=${PYTHON_DIR},-DBUILD_PYTHON=OFF,,python3-core"

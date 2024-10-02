@@ -5,6 +5,10 @@ CONFIG_gpio-demo
 CONFIG_peekpoke
 CONFIG_startup
 CONFIG_webfwu
+CONFIG_resnet50
+
+CONFIG_nfs-utils
+
 
 CONFIG_xrt
 CONFIG_xrt-dev
