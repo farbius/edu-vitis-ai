@@ -51,16 +51,16 @@ add_files -norecurse  ${project_dir}/${project_name}.gen/sources_1/bd/sys/hdl/sy
 set_property top sys_wrapper [current_fileset]
 
 update_compile_order -fileset sources_1
-#
-#launch_runs synth_1 -jobs $n_cores
-#wait_on_run synth_1
-#
-#launch_runs impl_1 -jobs $n_cores
-#wait_on_run impl_1
-#
-#launch_runs impl_1 -to_step write_bitstream -jobs $n_cores
-#wait_on_run impl_1 
-#
-#write_hw_platform -fixed -include_bit -force -file ${export_dir}/sys_wrapper.xsa
+
+launch_runs synth_1 -jobs $n_cores
+wait_on_run synth_1
+
+launch_runs impl_1 -jobs $n_cores
+wait_on_run impl_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs $n_cores
+wait_on_run impl_1 
+
+write_hw_platform -fixed -include_bit -force -file ${export_dir}/sys_wrapper.xsa
 
 puts "<< Vivado project is ready"
