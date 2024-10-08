@@ -24,6 +24,6 @@ $(LIN_TARGETS):
 	cd $(PWD)/build; ./$@.sh
 
 clean:
-	rm -f *.log *.jou
+	rm -f *.log *.str *.jou
 	rm -Rf build/
 
